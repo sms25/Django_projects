@@ -1,0 +1,98 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Predict</title>
+        <style>
+            .main{
+            position:fixed;
+            top:90px;
+            left:650px;
+            width:600px;
+            background-color:gainsboro;
+            align-items:center;
+            border-radius:5%;
+        }
+        div{
+            padding-left:50px;
+            padding-right: 50px;
+        }
+        .col-sm-4{
+            
+            padding: 1px 1px;
+        }
+
+        .row{
+
+            padding-top: 10px;
+        }
+
+        input[type=submit]{
+            background-color:Black;
+            color:white;
+            cursor:pointer;
+            padding: 16px 32px;
+        }
+        h1{
+            font-size:40px;
+        }
+        h2{
+            font-size:30px;
+            color:DarkRed;
+        }
+        body{
+            background-image: url("{%static 'W9J5PQR.jpg' %}");
+            background-size:cover;
+            background-repeat:no-repeat;
+        }
+        </style>
+    </head>
+    <body style="text-align: center;">
+        <div class="main">
+            <h1>Please enter the values:</h1>
+            <form action="result">
+                    <div class="col-sm-4" style="background-color: bisque;">
+                        <p>LONGITUDE</p>
+                        <input type="text" name="n1">
+                    </div>
+                    <div class="col-sm-4" style="background-color: darkseagreen;">
+                    <p>LATITUDE</p>
+                    <input type="text" name="n2">
+                    </div>
+                     <div class="col-sm-4" style="background-color: lightpink;">
+                    <p>HOUSING MEDIAN AGE</p>
+                    <input type="text" name="n3">
+                     </div>
+                    <div class="col-sm-4" style="background-color: turquoise;">
+                    <p>TOTAL NUMBER OF ROOMS</p>
+                    <input type="text" name="n4">
+                    </div>
+                    <div class="col-sm-4" style="background-color: rosybrown;">
+                    <p>TOTAL NUMBER OF BEDROOMS</p>
+                    <input type="text" name="n5">
+                    </div>
+                    <div class="col-sm-4" style="background-color: bisque;">
+                     <p>POPULATION</p>
+                    <input type="text" name="n6">
+                    </div>
+                    <div class="col-sm-4" style="background-color: darkseagreen;">
+                    <p>HOUSEHOLDS</p>
+                    <input type="text" name="n7">
+                    </div>
+                    <div class="col-sm-4" style="background-color: lightpink;">
+                    <p>MEDIAN INCOME</p>
+                    <input type="text" name="n8">
+                    </div>
+                        <div class="row">
+                            <input type="submit" value="PREDICT">
+                        </div>
+            </form>
+            <div class="row">
+                <h2>{{result2}}</h2>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+            <style>
+                h2{
+                    margin-top: 150px;
+                    font-size: 40px;
+                }
+
+                h1{
+                    font-size: 60px;
+
+                }
+
+                input[type=submit]{
+                    background-color: #000000;
+                    color: white;
+                    cursor: pointer;
+                    padding: 16px 32px;
+
+                }
+                body{
+                    
+                    background-image:url("{%static 'W9J5PQR.jpg' %}");
+                    background-size:cover;
+                    background-repeat:no-repeat;
+                    color: white;
+                    
+                     
+                }
+
+                .bg-img{
+                    filter: blur(8px);
+                }
+
+                .bg-text{
+                    position: absolute;
+                }
+                p {
+                   
+                    padding-left: 500px;
+                    padding-right: 500px;
+                    text-indent: 30px;
+                    font-size: 25px;
+                    text-align: center;
+                    text-shadow: #000000;
+                    background-color: rgb(2, 42, 75);
+                }
+                
+            </style>
+    </head>
+    <body style="text-align: center;">
+        <div class="bg-img"></div>
+            <div class="bg-text">
+                <h2>Welcome to </h2>
+                <h1>HOUSING  PRICE  PREDICTION  SYSTEM</h1>
+                <h2>About</h2>
+                <p>California housing market has turned out to be a hot seller's real estate market. 
+                The system is trained from the California housing prices data (1990 US Census) and 
+                can predict the housing price based on the longitude, latitude, housing median age, 
+                total number of rooms, total number of bedrooms, population, households and median income.
+                 </p>
+            
+        <form action = "predict">
+            <input type="submit" value="CONTINUE">
+        </form>
+    </div>
+    
+    </body>
+</html>
